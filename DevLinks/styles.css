@@ -1,0 +1,170 @@
+body {
+  font-family: "Mulish";
+  background: linear-gradient(
+    90deg,
+    rgba(72, 7, 121, 1) 20%,
+    rgba(152, 17, 151, 1) 100%
+  );
+  margin-left: 0;
+  text-align: center;
+}
+
+.card {
+  width: 400px;
+  height: 550px;
+  max-width: 100%;
+  max-height: 100%;
+  background: rgb(236, 236, 236);
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px,
+    rgb(0 0 0 / 20%) 0px -3px 0px inset;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile-pic {
+  border-radius: 1000px;
+  width: 180px;
+  height: 180px;
+  margin-top: 10px;
+}
+
+#title {
+  position: absolute;
+  top: 187px;
+  margin-top: 22px;
+}
+
+#subtitle {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  top: 242px;
+  margin-top: 13px;
+}
+
+button {
+  width: 95%;
+  height: 8%;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all ease 0.1s;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+button:active {
+  transform: translateY(5px);
+}
+
+#button-1:active {
+  transform: none;
+}
+
+#button-1 {
+  top: 483px;
+  background-color: #25d366;
+  box-shadow: 0px 5px 0px 0px #249c48;
+  user-select: text;
+}
+
+#button-2 {
+  top: 423px;
+  background-color: #0a66c2;
+  box-shadow: 0px 5px 0px 0px #1f387a;
+}
+
+#button-3 {
+  top: 363px;
+  background-color: #24292e;
+  box-shadow: 0px 5px 0px 0px #111114;
+}
+
+#button-4 {
+  top: 303px;
+  background-color: #d62976;
+  box-shadow: 0px 5px 0px 0px #a33468;
+}
+
+.card button img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  filter: invert(100%) grayscale(0%) brightness(10000%);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer p {
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 7px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.card:hover + .footer p {
+  opacity: 1;
+}
+
+@media (max-width: 300px) {
+  .card button {
+    margin-left: -3px;
+  }
+}
+
+@media (max-width: 226px) {
+  .card h1 {
+    font-size: 1.6em;
+  }
+  .card button {
+    margin-left: -3px;
+  }
+}
+
+@media (max-width: 181px) {
+  .card h1 {
+    font-size: 1.4em;
+  }
+  #profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 158px) {
+  .card p {
+    opacity: 0;
+  }
+}
+
+@media (max-height: 610px) {
+  .footer,
+  .footer p {
+    opacity: 0;
+  }
+}
